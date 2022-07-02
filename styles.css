@@ -5,9 +5,9 @@ body {
 }
 h1 {
   color: Chartreuse;
-  font: 1.3rem Inconsolata, monospace;
+  font-family: arial, "lucida console", sans-serif
 }
 p {
   color: Chartreuse;
-  font: 1.3rem Inconsolata, monospace;
+  font-family: arial, "lucida console", sans-serif
 }
