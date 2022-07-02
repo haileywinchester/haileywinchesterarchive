@@ -1,9 +1,13 @@
 body {
   background-color: black;
+  
+  
 }
 h1 {
   color: Chartreuse;
+  font: 1.3rem Inconsolata, monospace;
 }
 p {
   color: Chartreuse;
+  font: 1.3rem Inconsolata, monospace;
 }
