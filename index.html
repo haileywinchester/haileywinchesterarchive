@@ -12,9 +12,16 @@ $('body').terminal({
         this.echo('Hello, ' + what +
                   '. Wellcome to this terminal.');
     }
+  
 }, {
-    greetings: 'My First Web Terminal'
+    greetings: 'Hello, user. Type help to get help with commands.'
 });
-</script>
+$('body').terminal({
+    cat: function() {
+        this.echo($('<img src="https://placekitten.com/408/287">'));
+    }
+});
+  
+  </script>
 </body>
 </html>
