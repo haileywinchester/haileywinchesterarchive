@@ -24,7 +24,7 @@
 		span,
 		.cmd,
 		div {
-			--color: rgba(0, 128, 0, 0.99);
+			--color: rgba(34, 148, 163, 0.99);
 		}
 
 		.terminal,
@@ -37,20 +37,54 @@
 <body>
 	<script>
 		$('body').terminal({
-			emails: function () {
-				this.echo('[[!;;;;EMAIL-1.pdf]EMAIL 1]');
-			},
 			update: function () {
-				this.echo('Current Version: 0.1. Updating... 3% Complete.');
+				this.echo('Current Version: 0.2. Updating... 6% Complete.');
 			},
 			help: function () {
-				this.echo('emails, update')
+				this.echo('Keep in mind that not all commands are listed here. You will have to find those yourself, unfortunately. \nemails, update, whoami, search')
 			},
+      whoami: function () {
+				this.echo('I am your RCOD-OS terminal. You are Hailey Winchester. Hopefully.')
+			},      
       
+      PSI: function () {
+				this.typing('echo', 200, 'There is no information for you here, newcomer.', function() {  });
+        
+			},
+      RCOD: function () {
+				this.typing('echo', 50, 'Yes, Hailey. RCOD. The Facility? The one you built? \nI suppose if you really want more information about this place... you\'ve wanted somewhere to research for years. RCOD has been your solace for years, you and your daughter used to study here nightly. \nPSI as of late has increased their standards, though. Couldn\'t really keep up with them, not yet, at least.', function() {  });
+        
+			},
+      DAUGHTER: function () {
+				this.typing('echo', 50, 'Are you feeling down today? Cheer up, you will fix things soon.', function() {  });
+        
+			},
+      emails: function () {
+				this.echo('Simply type the name of an email to access it. \nEMAIL1')
+			},   
+     EMAIL1: function () {
+				this.typing('echo', 15, 'Good Evening Hailey! \nUnfortunately, we cannot accept your application to make your base a licensed and registered research facility under PSI\'s name, as it is deemed too primitive to PSI Standards, and is in violation of a few of our rules and regulations (see Article C1, D3, and Spread Prevention Protocol). As soon as you have amended the small issues here and there, we will send you the equipment you have requested and you may begin your research, with your facility considered a fully licensed and registered PSI Research Facility. \nPlease, take some time to fix any breaches of protocol before sending us another E-mail. Thank you for reaching out to us, and have a wonderful night. \nPSI Research.', function() {  });
+        
+			},
+      search: function () {
+				this.echo('Everybody\'s searching. That said, don\'t use this command. Simply type what you are looking for into your terminal. For example, try RCOD.')
+			},
+        
+		
+      
+   
 		}, {
 			greetings: 'Welcome back, Hailey. Type help to view working commands.'
 		});
+    
 	</script>
+  <style>
+ .terminal {
+     --color: #0c0;
+     --animation: terminal-glow;
+     text-shadow: 0 0 2px rgba(0, 200, 0, 0.8);
+ } 
+</style>
 </body>
 
 </html>
