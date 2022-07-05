@@ -24,7 +24,7 @@
 		span,
 		.cmd,
 		div {
-			--color: rgba(34, 148, 163, 0.99);
+			--color: rgba(0, 50, 164, 0.99);
 		}
 
 		.terminal,
@@ -38,8 +38,9 @@
 	<script>
 		$('body').terminal({
 			update: function () {
-				this.echo('Current Version: 0.21. Updating... 7% Complete.');
+				this.typing('echo', 75, 'Version 0.21. Downloading Update... 7% complete.', function() {  });
 			},
+      
 			help: function () {
 				this.echo('Keep in mind that not all commands are listed here. You will have to find those yourself, unfortunately. \nemails, update, whoami, search, journal')
 			},
@@ -91,7 +92,7 @@
  .terminal {
      --color: #0c0;
      --animation: terminal-glow;
-     text-shadow: 0 0 2px rgba(0, 200, 0, 0.8);
+     text-shadow: 0 0 2px rgba(0, 50, 165, 0.8);
  } 
 </style>
 </body>
