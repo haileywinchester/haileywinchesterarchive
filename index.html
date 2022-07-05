@@ -38,7 +38,7 @@
 	<script>
 		$('body').terminal({
 			update: function () {
-				this.echo('Current Version: 0.2. Updating... 6% Complete.');
+				this.typing('echo', 100, 'Currently Updating... Progress - 6%', function() {  });
 			},
 			help: function () {
 				this.echo('Keep in mind that not all commands are listed here. You will have to find those yourself, unfortunately. \nemails, update, whoami, search')
