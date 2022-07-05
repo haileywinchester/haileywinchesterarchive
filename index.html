@@ -38,13 +38,19 @@
 	<script>
 		$('body').terminal({
 			update: function () {
-				this.typing('echo', 100, 'Currently Updating... Progress - 6%', function() {  });
+				this.echo('Current Version: 0.21. Updating... 7% Complete.');
 			},
 			help: function () {
-				this.echo('Keep in mind that not all commands are listed here. You will have to find those yourself, unfortunately. \nemails, update, whoami, search')
+				this.echo('Keep in mind that not all commands are listed here. You will have to find those yourself, unfortunately. \nemails, update, whoami, search, journal')
 			},
       whoami: function () {
 				this.echo('I am your RCOD-OS terminal. You are Hailey Winchester. Hopefully.')
+			},  
+      journal: function () {
+				this.echo('Simply type the name of the journal entry to read. \njournal1')
+			},   
+      journal1: function () {
+				this.typing('echo', 75, 'Ugh. \nThat\'s all I\'ve really got, right now. I spend all this time setting up a fucking base, and PSI\'s dumbass officials just decide it\'s not good enough? I built this place from the ground up! \nEvery single stone put painstakingly into place with my bare fucking hands. \nBut fine, PSI, fine. I guess I\'ll just have to improve, and that\'s fine by me.', function() {  });
 			},      
       
       PSI: function () {
@@ -68,6 +74,9 @@
 			},
       search: function () {
 				this.echo('Everybody\'s searching. That said, don\'t use this command. Simply type what you are looking for into your terminal. For example, try RCOD. \nPsst, by the way, when searching, always type in all UPPERCASE.')
+			},
+      test: function () {
+				this.set_prompt("IDIOT.", { typing: true, delay: 10 });
 			},
         
 		
